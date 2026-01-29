@@ -43,26 +43,27 @@ class Program
             Console.WriteLine("No scriptures found in the file.");
             return;
         }
-        // Creating a Reference
-        Reference john316 = new Reference("John", 3, 16);
+        // // Creating a Reference
+        // Reference john316 = new Reference("John", 3, 16);
 
-        //  Creating a Scripture object
-        string verseText = "For God so loved the world";
-        Scripture scripture = new Scripture(john316, verseText);
+        // //  Creating a Scripture object
+        // string verseText = "For God so loved the world";
+        // Scripture scripture = new Scripture(john316, verseText);
 
         Random rnd = new Random();
+        Scripture scriptured = scriptures[rnd.Next(scriptures.Count)];
 
         //while game loop 
-        while (!scripture.IsCompletelyHidden())
+        while (!scriptured.IsCompletelyHidden())
         {
             // Display current state of the verse
-            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine(scriptured.GetDisplayText());
 
             // Decide how many words to hide this round (random 1–2 words for example)
             int wordsToHide = rnd.Next(1, 3);
 
             // Hide some words
-            scripture.HideRandomWords(wordsToHide);
+            scriptured.HideRandomWords(wordsToHide);
 
             // Wait for user input to continue
             Console.WriteLine("Press Enter to hide more words...");
