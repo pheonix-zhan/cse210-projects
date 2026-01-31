@@ -14,9 +14,10 @@ public class Scripture
     }
 
     // Hides a specified number of random visible words
+    private Random _random = new Random();
     public void HideRandomWords(int numberToHide)
     {
-        // Step 1: collect all currently visible words
+        //  collect all currently visible words
         List<Word> visibleWords = new List<Word>();
         foreach (Word w in _words)
         {
@@ -26,17 +27,15 @@ public class Scripture
             }
         }
 
-        // Step 2: nothing to hide
+       // nothing to hide
         if (visibleWords.Count == 0)
             return;
 
-        // Step 3: create one Random instance
-        Random random = new Random();
-
-        // Step 4: hide 'numberToHide' words randomly
+        
+        //  hide 'numberToHide' words randomly
         for (int i = 0; i < numberToHide && visibleWords.Count > 0; i++)
         {
-            int index = random.Next(visibleWords.Count);
+            int index = _random.Next(visibleWords.Count);
             visibleWords[index].Hide();       // hide the word
             visibleWords.RemoveAt(index);     // remove from list so we don't pick it again
         }

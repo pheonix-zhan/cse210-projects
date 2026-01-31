@@ -59,18 +59,29 @@ class Program
             // Display current state of the verse
             Console.WriteLine(scriptured.GetDisplayText());
 
-            // Decide how many words to hide this round (random 1–2 words for example)
-            int wordsToHide = rnd.Next(1, 3);
+            Console.WriteLine("Press Enter to hide  words or type quit to exit...");
+            string inputWord = Console.ReadLine();
 
-            // Hide some words
-            scriptured.HideRandomWords(wordsToHide);
+            // an if loop for the user to choose to continue or quit
+            if (inputWord.ToLower() == "quit")
+            {
+                Console.WriteLine("Quitin is part of life come again");
+                break;
 
-            // Wait for user input to continue
-            Console.WriteLine("Press Enter to hide more words...");
-            Console.ReadLine();
+
+            }
+            else
+            {
+                // Decide how many words to hide this round (random 1–2 words for example)
+                int wordsToHide = rnd.Next(1, 3);
+
+                // Hide some words
+                scriptured.HideRandomWords(wordsToHide);
+
+            }
         }
-
         // All words are hidden
-        Console.WriteLine("All words are hidden! Memorization complete!");
+        Console.WriteLine("Great job! You’ve completed the scripture memorization.!");
+
     }
 }
