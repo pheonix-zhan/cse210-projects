@@ -1,0 +1,93 @@
+
+
+YOUTUBE Program Design:
+#---------------------------#
+         Video   Class         
+#---------------------------#
+	Attributes
+•	_title : string         
+•	_author : string       
+•	_lengthSeconds : int    
+•	_comments : List<Comment>
+---------------------------
+	Behavior
+•	Video(title:string, author:string, lengthSeconds:int) 
+•	AddComment(comment: Comment) : void              
+•	GetNumberOfComments() : int    
+•	GetComments() : List<Comment>                     
+---------------------------	
+
+#---------------------------#
+        Comment    Class       
+#---------------------------#
+	Attributes
+•	_commenterName : string
+•	_commentText : string          
+---------------------------
+	Behaviours
+•	Comment(name:string, text:string)
+•	GetCommenterName() : string     
+•	GetText() : string                
+---------------------------
+
+
+ONLINE ORDERING PROGRAM DESIGN
+
+#-------------------------------#
+            Order Class              
+#-------------------------------#
+	Attributes 
+•	_products : List<Product>  
+•	_customer : Customer        
+-------------------------------
+	Behavior
+•	Order(customer: Customer)                        
+•	AddProduct(product: Product) : void              
+•	CalculateTotalCost() : decimal                   
+•	GetPackingLabel() : string                       
+•	GetShippingLabel() : string                      
+-------------------------------
+#-------------------------------#
+           Customer  Class          
+#-------------------------------#
+	Attributes
+•	_name : string              
+•	_address : Address          
+-------------------------------
+	Behavior
+•	Customer(name:string, address:Address) 
+•	LivesInUSA() : bool                     
+•	GetName() : string                      
+•	GetAddress() : Address                  
+-------------------------------
+#-------------------------------#
+           Address  Class        
+#-------------------------------#
+	Attributes
+•	_street : string            
+•	_city : string              
+•	_stateOrProvince : string   
+•	_country : string           
+-------------------------------
+	Behaviour
+•	Address(street:string, city:string, state:string, country:string) 
+•	IsInUSA() : bool                                                
+•	GetFullAddress() : string                                       
+-------------------------------
+
+#-------------------------------#
+           Product Class            
+#-------------------------------#
+	Attributes
+•	_name : string              
+•	_productId : string         
+•	_pricePerUnit : decimal     
+•	_quantity : int             
+-------------------------------
+
+Behaviour
+•	Product(name:string, id:string, price:decimal, qty:int) 
+•	GetTotalCost() : decimal                                
+•	GetName() : string                                      
+•	GetProductId() : string                                 
+-------------------------------------------------
