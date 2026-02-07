@@ -8,10 +8,10 @@ public class Product
 
 public Product(string name, string id, double price, int quantity)
     {
-        name = _name;
-        id = _productId;
-        price = _pricePerUnit;
-        quantity = _quantity;
+        _name = name;
+       _productId = id ;
+        _pricePerUnit = price;
+        _quantity = quantity;
     }
 
 public double GetTotalCost()

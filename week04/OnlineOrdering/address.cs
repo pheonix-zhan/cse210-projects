@@ -1,24 +1,24 @@
 public class Address
 {
-private string _street;
-private string _city;
-private string _state;
-private string _country;
+    private string _street;
+    private string _city;
+    private string _state;
+    private string _country;
 
-public Address(string street, string city, string state, string country)
+    public Address(string street, string city, string state, string country)
     {
-        street = _street;
-        city = _city;
-        state = _state;
-        country = _country;
+        _street = street;
+        _city = city;
+        _state = state;
+        _country = country;
     }
 
-public bool IsInUSA()
+    public bool IsInUSA()
     {
         return _country.Trim().ToUpper() == "USA" || _country.Trim().ToUpper() == "UNITED STATES";
     }
 
-public string GetFullAddress()
+    public string GetFullAddress()
     {
         return $"{_street}\n{_city}, {_state}\n{_country}";
     }
