@@ -22,11 +22,11 @@ public class Math : Assignment
         _problem = problem;
     }
 
-    // public Math( string studentName, string topic, string textbookSection, string problem) : base(studentName, topic)
-    // {
-    //     _textbookSection = textbookSection;
-    //     _problem = problem;
-    // }
+    public Math( string studentName, string topic, string textbookSection, string problem) : base(studentName, topic)
+    {
+        _textbookSection = textbookSection;
+        _problem = problem;
+    }
 
     public string GetHomeworkList()
     {
