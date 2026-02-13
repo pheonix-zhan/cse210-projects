@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 public class Breathing : Activity
 {
-    public Breathing() : base ("Breathing", "we are going to relax together on the so as to relieve your stress")
+    public Breathing() : base ("Breathing", "we are going to relax together on the so as to relieve your stress", 0)
     {
         
     }

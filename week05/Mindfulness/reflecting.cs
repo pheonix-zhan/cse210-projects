@@ -3,7 +3,7 @@ public class Reflecting : Activity
     private List<string> _prompts = new List<string>();
     private List<string> _question = new List<string>();
 
-    public Reflecting() : base("reflecting", "we take time to think about what we do our lives and how it has impacted on us")
+    public Reflecting() : base("reflecting", "we take time to think about what we do our lives and how it has impacted on us", 0)
     {
         _prompts.Add("Think of a time when you stood up for someone else.");
         _prompts.Add("Think of a time when you did something really difficult.");

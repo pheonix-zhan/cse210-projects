@@ -5,7 +5,7 @@ public class Listening : Activity
     private int _count;
     private List<string> _prompts = new List<string>();
 
-    public Listening() : base ( "Listing", "This activity will help you reflect on the good things in your life by listing as many things as you can.")
+    public Listening() : base ( "Listening", "This activity will help you reflect on the good things in your life by listing as many things as you can.", 0)
     {
         _prompts.Add("Who are people that you appreciate?");
         _prompts.Add("What are the personal strengths of yours?");
