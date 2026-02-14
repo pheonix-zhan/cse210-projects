@@ -55,11 +55,11 @@ public class Reflecting : Activity
     public void DisplayPrompt()
     {
         string prompt = GetRandomPrompt();
-        
+
         Console.WriteLine();
         Console.WriteLine("Consider the following prompt:");
         Console.WriteLine();
-        
+
         Console.WriteLine($"--- {prompt} ---");
         Console.WriteLine();
 
