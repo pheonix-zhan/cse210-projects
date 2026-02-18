@@ -16,19 +16,11 @@ public class ChecklistGoal : Goal
     {
         _amountCompleted++;
         int total = GetPoints();
-
-        if (_amountCompleted == _target)
-        {
-            total += _bonus;
-        }
-
+        if (_amountCompleted == _target) total += _bonus;
         return total;
     }
 
-    public override bool IsComplete()
-    {
-        return _amountCompleted >= _target;
-    }
+    public override bool IsComplete() => _amountCompleted >= _target;
 
     public override string GetDetailsString()
     {
@@ -37,6 +29,6 @@ public class ChecklistGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        return $"ChecklistGoal|{GetName()}|{_amountCompleted}";
+        return $"ChecklistGoal|{GetName()}|{GetPoints()}|{_amountCompleted}|{_target}|{_bonus}";
     }
 }

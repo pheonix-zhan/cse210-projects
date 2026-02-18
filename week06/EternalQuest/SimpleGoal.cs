@@ -18,13 +18,10 @@ public class SimpleGoal : Goal
         return 0;
     }
 
-    public override bool IsComplete()
-    {
-        return _isComplete;
-    }
+    public override bool IsComplete() => _isComplete;
 
     public override string GetStringRepresentation()
     {
-        return $"SimpleGoal|{GetName()}|{IsComplete()}";
+        return $"SimpleGoal|{GetName()}|{GetPoints()}|{IsComplete()}";
     }
 }
